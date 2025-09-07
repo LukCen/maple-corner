@@ -1,6 +1,6 @@
 <template>
-  <div>
+  <div class="flex flex-col min-h-screen w-screen">
     <NuxtRouteAnnouncer />
-    <Test />
+    <Landing />
   </div>
 </template>

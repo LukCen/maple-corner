@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()]
   },
   css: ['~/assets/styles/tailwind.css', '~/assets/styles/style.scss'],
-  modules: ['@nuxt/fonts'],
+  modules: ['@nuxt/fonts', '@nuxt/icon'],
   app: {
     head: {
       title: 'Maple Corner',

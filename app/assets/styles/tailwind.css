@@ -2,27 +2,11 @@
 @theme {
 
   /* browns */
-  --color-espresso: #6F4E37;
-  --color-rich-coffee: #8B4513;
-  --color-medium-roast: #A0522D;
-  --color-orange-juice: #D2691E;
+  --color-espresso: #362a20;
 
-  /* warm tones */
-  --color-dark-amber: #CC8500;
-  --color-dark-orange: #FF8C00;
-  --color-goldenrod: #DAA520;
-  --color-dark-goldenrod: #B8860B;
 
   /* white/neutrals */
-  --color-beige: #F5F5DC;
-  --color-linen: #FAF0E6;
-  --color-cornsilk: #FFF8DC;
-  --color-cream: #FFFDD0;
-
-  /* leafy accents */
-  --color-peru: #CD853F;
-  --color-tan: #D2B48C;
-  --color-rosy-brown: #BC8F8F;
+  --color-beige: #eed9c4;
 
   /* breakpoints */
   --breakpoint-tablet : 720px;

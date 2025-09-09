@@ -10,7 +10,7 @@ function saveClick() {
 }
 
 // list of stuff sold - drinks, confectionaries, desserts, extras etc -, child of 'Menu' element from array above
-const itemsList = []
+// const itemsList = []
 </script>
 <template>
   <!-- mobile/tablet -->

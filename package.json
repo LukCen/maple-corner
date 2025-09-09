@@ -14,13 +14,20 @@
     "@nuxt/icon": "^2.0.0",
     "@nuxt/image": "1.11.0",
     "@tailwindcss/vite": "^4.1.13",
+    "add": "^2.0.6",
+    "module": "^1.2.5",
+    "nuxi": "^3.28.0",
     "nuxt": "^4.1.1",
+    "pinia": "^3.0.3",
     "tailwindcss": "^4.1.13",
     "vue": "^3.5.20",
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
     "@iconify-json/lucide": "^1.2.66",
+    "@pinia/nuxt": "^0.11.2",
+    "@vueuse/core": "^13.9.0",
+    "@vueuse/nuxt": "^13.9.0",
     "sass-embedded": "^1.92.1"
   }
 }

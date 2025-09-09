@@ -1,4 +1,3 @@
 <template>
-
   <Landing />
 </template>

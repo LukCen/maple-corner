@@ -12,6 +12,7 @@
   "dependencies": {
     "@nuxt/fonts": "^0.11.4",
     "@nuxt/icon": "^2.0.0",
+    "@nuxt/image": "1.11.0",
     "@tailwindcss/vite": "^4.1.13",
     "nuxt": "^4.1.1",
     "tailwindcss": "^4.1.13",
@@ -19,6 +20,7 @@
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
+    "@iconify-json/lucide": "^1.2.66",
     "sass-embedded": "^1.92.1"
   }
 }

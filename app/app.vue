@@ -1,12 +1,9 @@
 <template>
-  <div class="--wrapper flex flex-col min-h-screen w-screen">
-    <NuxtLayout name="default">
-      <NuxtRouteAnnouncer />
-      <MainMenu />
-      <NuxtPage />
-    </NuxtLayout>
-
-  </div>
+  <NuxtLayout name="default">
+    <NuxtRouteAnnouncer />
+    <MainMenu />
+    <NuxtPage />
+  </NuxtLayout>
 </template>
 <style>
 @media (max-width: 480px) {

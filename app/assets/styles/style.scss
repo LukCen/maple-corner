@@ -1,6 +1,7 @@
 :root {
   font-family: 'Open Sans', sans-serif;
   overflow-x: hidden;
+  display: flex;
 }
 
 main {
@@ -11,7 +12,19 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  flex: 1;
+}
+
+#__nuxt {
+  min-height: 100vh;
+  background: rgba(0, 0, 0, .4);
 }
 
 body::before {

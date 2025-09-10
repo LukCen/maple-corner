@@ -29,6 +29,9 @@ useHead({
       <p>Maple Corner prides itself on using only highest quality coffee beans, and all our sweets and cakes use
         ingredients purchased from local farmers and small bussinesses. From the community, to the commmunity!</p>
     </section>
+    <section>
+      <BannerSection />
+    </section>
   </div>
 </template>
 <style scoped>

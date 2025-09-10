@@ -13,7 +13,7 @@ const props = defineProps({
     type: String
   },
   imageUrl: {
-    default: 'https://placehold.co/800x500/red/white/?text=%22Missing%20imageUrl%20param%20or%20invalid%20URL%22',
+    default: '/maplecorner_banner_placeholder.jpg',
     type: String
   },
 
@@ -40,10 +40,11 @@ const props = defineProps({
     'flex-col': props.direction === 'column'
   }" class="flex gap-4 bg-espresso text-beige h-fit w-full rounded-sm overflow-hidden">
 
-    <NuxtImg :src="props.imageUrl" sizes="100% 100%" />
-    <div class="text flex flex-col justify-between p-2">
+    <NuxtImg :src="props.imageUrl" class="flex flex-grow-1 flex-shrink-1 basis-1/2 max-w-1/2" />
+    <div class="text flex flex-grow-1 flex-shrink-1 basis-1/2 max-w-1/2 flex-col justify-around p-2">
       <h3 class="font-bold">{{ props.title }}</h3>
-      <span class="font-medium"></span>
+      <span class="font-medium">{{ props.subtitle }}</span>
+      <p>{{ props.text }}</p>
     </div>
   </section>
 

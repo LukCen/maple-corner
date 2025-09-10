@@ -40,10 +40,10 @@ const props = defineProps({
     'flex-col': props.direction === 'column'
   }" class="flex gap-4 bg-espresso text-beige h-fit w-full rounded-sm overflow-hidden">
 
-    <NuxtImg :src="props.imageUrl" class="flex flex-grow-1 flex-shrink-1 basis-1/2 max-w-1/2" />
-    <div class="text flex flex-grow-1 flex-shrink-1 basis-1/2 max-w-1/2 flex-col justify-around p-2">
-      <h3 class="font-bold">{{ props.title }}</h3>
-      <span class="font-medium">{{ props.subtitle }}</span>
+    <NuxtImg :src="props.imageUrl" :class="{ 'basis-full max-w-full': props.direction === 'column' || 'basis-1/2 max-w-1/2' }" class="flex flex-grow-1 flex-shrink-1 basis-1/2 max-w-1/2" />
+    <div :class="{ 'basis-full max-w-full': props.direction === 'column' || 'basis-1/2 max-w-1/2' }" class="text flex flex-grow-1 flex-shrink-1 basis-1/2 max-w-1/2 flex-col justify-around p-2">
+      <h3>{{ props.title }}</h3>
+      <span class="font-medium text-xl">{{ props.subtitle }}</span>
       <p>{{ props.text }}</p>
     </div>
   </section>

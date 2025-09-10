@@ -19,7 +19,7 @@ useHead({
 <template>
   <div class="--landing text-white h-full flex-1 w-full">
     <section class="welcome flex flex-col gap-4 items-center text-center">
-      <h1 class="">Maple Corner - Your friendly coffee place!</h1>
+      <h1 class="font-black">Maple Corner - Your friendly coffee place!</h1>
       <p>Hello! Thank you for visiting us. We're Maple Corner, a coffee shop and pattisiere founded in 2025 by Łukasz
         Cena.</p>
       <p>We envisioned this place as a quiet, friendly corner of your town, where you're always welcome to come in and
@@ -31,6 +31,9 @@ useHead({
     </section>
     <section>
       <BannerSection />
+      <BannerSection direction="reverse" />
+      <BannerSection direction="column" />
+
     </section>
   </div>
 </template>

@@ -9,6 +9,12 @@ export default defineNuxtConfig({
   },
   css: ['~/assets/styles/tailwind.css', '~/assets/styles/style.scss'],
   modules: ['@nuxt/fonts', '@nuxt/icon', '@nuxt/image', '@vueuse/nuxt', '@pinia/nuxt'],
+  fonts: {
+    priority: ['bunny', 'google'],
+    defaults: {
+      weights: ['300 400 500 600 700']
+    }
+  },
   app: {
     head: {
       title: 'Maple Corner',

@@ -39,7 +39,7 @@ const desktopMenuItems = [
   <nav class="hidden desktop:flex z-10 gap-4 w-full items-center min-h-[60px] rounded-xl bg-espresso/95 text-beige px-2 py-1 shadow-[0px_0px_5px_1px_var(--color-beige)]">
     <div class="logo_text flex gap-2 items-center">
       <NuxtImg src="/maplecorner_logo.webp" class="rounded-full" />
-      <span class="text-4xl">Maple Corner</span>
+      <span class="--nav-header text-5xl font-bold">Maple Corner</span>
     </div>
     <ul class="flex gap-1 flex-1 justify-around items-center">
       <li v-for="item in desktopMenuItems" :key="item.id" class="flex items-center justify-center">
@@ -54,6 +54,9 @@ const desktopMenuItems = [
 </template>
 
 <style scoped>
+.--nav-header {
+  font-family: "Story Script", sans-serif;
+}
 .--menu-left>*, .--menu-right>* {
   box-shadow: 0px 0px 10px 1px var(--color-beige);
   flex-basis: 50%;

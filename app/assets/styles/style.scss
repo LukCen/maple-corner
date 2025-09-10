@@ -24,12 +24,6 @@ body {
   overflow-x: hidden;
 }
 
-#__nuxt {
-  min-height: 100vh;
-  background: rgba(0, 0, 0, .4);
-  overflow-x: hidden;
-}
-
 body::before {
   z-index: -10;
   top: 0;
@@ -38,4 +32,10 @@ body::before {
   width: 100%;
   position: absolute;
   filter: blur(2px);
+}
+
+#__nuxt {
+  min-height: 100vh;
+  background: rgba(0, 0, 0, .4);
+  overflow-x: hidden;
 }

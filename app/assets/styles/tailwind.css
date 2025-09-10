@@ -1,9 +1,7 @@
 @import 'tailwindcss';
 @theme {
-
   /* browns */
   --color-espresso: #362a20;
-
 
   /* white/neutrals */
   --color-beige: #eed9c4;

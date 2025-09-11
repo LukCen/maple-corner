@@ -38,15 +38,20 @@ const props = defineProps({
     'flex-row': props.direction === 'row',
     'flex-row-reverse': props.direction === 'reverse',
     'flex-col': props.direction === 'column'
-  }" class="flex gap-4 bg-espresso text-beige h-fit w-full rounded-sm overflow-hidden">
+  }" class="flex gap-4 bg-espresso text-beige h-fit w-full max-w-[1200px] mx-auto rounded-sm overflow-hidden">
 
-    <NuxtImg :src="props.imageUrl" :class="{ 'basis-full max-w-full': props.direction === 'column' || 'basis-1/2 max-w-1/2' }" class="flex flex-grow-1 flex-shrink-1 basis-1/2 max-w-1/2" />
-    <div :class="{ 'basis-full max-w-full': props.direction === 'column' || 'basis-1/2 max-w-1/2' }" class="text flex flex-grow-1 flex-shrink-1 basis-1/2 max-w-1/2 flex-col justify-around p-2">
+    <NuxtImg :src="props.imageUrl" :class="props.direction === 'column' ? 'basis-full max-w-full' : 'basis-1/2 max-w-1/2'" class="flex flex-grow-1 flex-shrink-1" />
+    <div :class="props.direction === 'column' ? 'basis-full max-w-full' : 'basis-1/2 max-w-1/2'" class="text flex flex-grow-1 flex-shrink-1 flex-col justify-around p-2">
       <h3>{{ props.title }}</h3>
-      <span class="font-medium text-xl">{{ props.subtitle }}</span>
+      <span class="font-bold text-lg">{{ props.subtitle }}</span>
       <p>{{ props.text }}</p>
     </div>
   </section>
-
-
 </template>
+
+<style scoped>
+h3 {
+  font-family: "Story Script";
+  letter-spacing: .1rem;
+}
+</style>

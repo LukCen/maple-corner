@@ -30,9 +30,9 @@ useHead({
         ingredients purchased from local farmers and small bussinesses. From the community, to the commmunity!</p>
     </section>
     <section>
-      <BannerSection />
-      <BannerSection direction="reverse" />
-      <BannerSection direction="column" />
+      <BaseBanner />
+      <BaseBanner direction="reverse" />
+      <BaseBanner direction="column" />
 
     </section>
   </div>

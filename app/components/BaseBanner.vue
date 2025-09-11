@@ -28,6 +28,18 @@ const props = defineProps({
   text: {
     default: 'Pizza ipsum dolor amet melted cheese sausage broccoli, bbq garlic parmesan chicken and bacon large. Garlic parmesan red onions platter ranch white garlic mozzarella bbq sauce ham. Garlic parmesan pepperoni bbq rib, hawaiian pineapple chicken onions ranch mozzarella NY style bianca peppers sausage. Banana peppers burnt mouth meatball bianca. Stuffed crust buffalo sauce pie, party white pizza chicken and bacon chicken extra cheese hand tossed pineapple. Garlic parmesan garlic sauce white garlic red onions, fresh tomatoes pork mozzarella onions marinara spinach extra sauce bacon & tomato chicken wing.',
     type: String
+  },
+  linkTo: {
+    default: "/",
+    type: String
+  },
+  linkText: {
+    default: "See in action",
+    type: String
+  },
+  linkIcon: {
+    default: "lucide:arrow-right",
+    type: String
   }
 })
 
@@ -45,6 +57,10 @@ const props = defineProps({
       <h3>{{ props.title }}</h3>
       <span class="font-bold text-lg">{{ props.subtitle }}</span>
       <p>{{ props.text }}</p>
+      <NuxtLink class="btn-base border-beige border-1 w-fit text-beige hover:bg-beige hover:text-espresso rounded-md">
+        <span class="font-semibold">{{ props.linkText }}</span>
+        <Icon :name="props.linkIcon" />
+      </NuxtLink>
     </div>
   </section>
 </template>

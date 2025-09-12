@@ -2,15 +2,23 @@
 @theme {
   /* browns */
   --color-espresso: #362a20;
+  --color-chocolate: #9D673A;
+  --color-almond: #DEAC76;
 
   /* white/neutrals */
   --color-beige: #eed9c4;
-
+  --color-steamed-milk: #C5B5A6;
   /* breakpoints */
   --breakpoint-tablet : 720px;
   --breakpoint-desktop: 1280px;
   --breakpoint-2k: 1921px;
 
+  /* color scheme */
+  --color-dark: var(--color-espresso);
+  --color-primary: var(--color-chocolate);
+  --color-secondary: var(--color-almond);
+  --color-light: var(--color-beige);
+  --color-accent: var(--color-steamed-milk)
 }
 
 @layer components {

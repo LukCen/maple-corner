@@ -1,21 +1,4 @@
 <!-- homepage -->
-<script setup lang="ts">
-import bgMobile from '~/assets/images/backgrounds/bg_home_mobile.webp';
-import bgTablet from '~/assets/images/backgrounds/bg_home_tablet.webp';
-import bgDesktop from '~/assets/images/backgrounds/bg_home_desktop.webp';
-import bg2k from '~/assets/images/backgrounds/bg_home_2k.webp';
-useHead({
-  link: [
-    { rel: 'preload', type: 'image/webp', as: 'image', href: bgMobile, media: '(width <= 480px)' },
-    { rel: 'preload', type: 'image/webp', as: 'image', href: bgTablet, media: '(width >= 481px) and (width <= 1279px)' },
-    { rel: 'preload', type: 'image/webp', as: 'image', href: bgDesktop, media: '(width >= 1280px) and (width <= 1920px)' },
-    { rel: 'preload', type: 'image/webp', as: 'image', href: bg2k, media: ('width > 1921px') }
-  ],
-  bodyAttrs: {
-    'data-page': 'home'
-  }
-})
-</script>
 <template>
   <div class="--landing text-dark h-full flex-1 w-full">
     <section class="welcome flex flex-col gap-4 items-center text-center">

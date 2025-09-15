@@ -29,5 +29,13 @@ export default defineNuxtConfig({
         { rel: 'manifest', href: '/favicon/site.webmanifest' }
       ]
     }
+  },
+  runtimeConfig: {
+    url: process.env.MAPLECORNER_PUBLICSUPABASE_URL,
+    key: process.env.MAPLECORNER_PUBLICSUPABASE_ANON_KEY,
+    public: {
+      url: process.env.MAPLECORNER_PUBLICSUPABASE_URL,
+      key: process.env.MAPLECORNER_PUBLICSUPABASE_ANON_KEY
+    }
   }
 })

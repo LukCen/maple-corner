@@ -77,6 +77,6 @@ body::before {
 // id
 #__nuxt {
   min-height: 100vh;
-  background: rgba(0, 0, 0, .4);
   overflow-x: hidden;
+  background: var(--color-almond);
 }

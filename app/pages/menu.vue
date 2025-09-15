@@ -1,3 +1,3 @@
 <template>
-  This page will contain menu items
+  <main></main>
 </template>

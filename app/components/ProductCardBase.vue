@@ -22,14 +22,22 @@ const props = defineProps({
 </script>
 
 <template>
-  <article class="flex flex-col">
-    <NuxtImg :src="props.imgUrl"></NuxtImg>
-    <div class="text flex flex-col">
-      <div class="text_info flex flex-col">
+  <article class="flex flex-col rounded-sm overflow-hidden">
+    <NuxtImg :src="props.imgUrl" />
+    <div class="text flex flex-col bg-dark p-4 gap-8">
+      <div class="text_info flex flex-col gap-4">
         <h3>{{ props.title }}</h3>
         <p>{{ props.desc }}</p>
       </div>
-      <NuxtLink :to="props.linkTo" class="bg-beige text-espresso"></NuxtLink>
+      <NuxtLink :to="props.linkTo" class="flex gap-2 justify-center btn-base border-light border-1 rounded-md w-fit text-light hover:text-dark hover:bg-light duration-150">Learn more
+        <Icon name="lucide:arrow-right" />
+      </NuxtLink>
     </div>
   </article>
 </template>
+
+<style scoped>
+article {
+  box-shadow: 0px 0px 5px 1px var(--color-chocolate)
+}
+</style>

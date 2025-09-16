@@ -5,9 +5,8 @@ import type { Tables } from '~/types/supabase'
 const config = useRuntimeConfig()
 
 type Product = Tables<'products'>
-// i am such a good programmer
-const data = ref<Product[]>([])
 
+const data = ref<Product[]>([])
 // takes out only the values inside the 'type' column and 
 const filterCats = computed(() => {
   // Extract unique, non-null types
@@ -17,20 +16,13 @@ const filterCats = computed(() => {
       .filter((type): type is string => type !== null && type !== undefined)
   )]
 
-  console.log('Unique categories computed:', uniqueTypes)
   return uniqueTypes
 })
-// const serverTestRun = async () => {
-//   // I FUCKING HATE THIS LANGUAGE SOMETIMES
-//   data.value = await serverStart<Product>(config.public.url, config.public.key, 'products', '*') ?? []
-// }
+
 const server = createClient(config.public.url, config.public.key)
 // literally why is this hook here this doesn't have to wait for shit
 onMounted(async () => {
-  // console.log(data.value)
-  // serverTestRun()
   let { data: products, error } = await server.from('products').select('*')
-  // data.value = products
   if (products) {
     data.value = products
   }
@@ -42,7 +34,6 @@ function capitalize(t: string): string {
   return t.charAt(0).toUpperCase() + t.slice(1)
 }
 
-
 </script>
 <template>
   <main>
@@ -52,8 +43,20 @@ function capitalize(t: string): string {
           <input :key="item" type="checkbox" :id="'filter' + item" :name="item ?? 'empty'"><label :for="'filter' + item">{{ capitalize(item ?? 'Incorrect value') }}</label>
         </li>
       </ul>
+      <button></button>
     </form>
-    <div class="content"></div>
+    <div class="content">
+      <ul class="product_list flex flex-wrap">
+        <li class="flex flex-col items-center gap-4 max-w-1/2 basis-1/2 max-h-fit flex-1" v-for="item in data">
+          <NuxtImg :src="item.img ?? '/product_card_placeholder.jpg'" width="300" height="300" />
+          <div class="flex flex-col max-w-fit justify-center gap-2 w-2/3">
+            <h3>{{ item.name }}</h3>
+            <p>{{ item.desc }}</p>
+          </div>
+        </li>
+      </ul>
+
+    </div>
   </main>
 </template>
 
@@ -63,7 +66,8 @@ function capitalize(t: string): string {
   border: 2px solid lightblue;
 }
 
-.filters {
+main {
+  display: grid;
   grid-template-columns: 2fr 10fr;
 }
 </style>

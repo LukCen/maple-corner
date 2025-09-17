@@ -13,14 +13,28 @@ function saveClick() {
 </script>
 <template>
   <!-- mobile/tablet -->
-  <nav class="flex desktop:hidden fixed z-10 bottom-0 gap-4 w-11/12 m-[0_auto] justify-around items-center min-h-[60px] rounded-xl">
-    <ul class="--menu-left flex gap-1 flex-1">
-      <NuxtLink class="bg-espresso rounded-md text-beige" to="/menu">Menu</NuxtLink>
+  <!-- <nav class="flex desktop:hidden fixed z-10 bottom-0 gap-4 w-11/12 m-[0_auto] justify-around items-center min-h-[60px] rounded-xl">
+    <ul class="--menu-left flex gap-1 w-full flex-2">
+      <NuxtLink class="bg-espresso rounded-md w-full text-beige" to="/menu">Menu</NuxtLink>
     </ul>
 
-    <NuxtImg width="50" height="50" src="/maplecorner_logo.webp" class="rounded-full shadow-[0px_0px_10px_1px_var(--color-beige)]" />
+    <NuxtImg width="50" height="50" src="/maplecorner_logo.webp" class="rounded-full flex-1 shadow-[0px_0px_10px_1px_var(--color-beige)]" />
 
-    <ul class="--menu-right flex gap-1 flex-1">
+    <ul class="--menu-right flex gap-1 flex-2">
+      <BaseButton class="bg-espresso rounded-md text-beige">Item</BaseButton>
+      <BaseButton aria-label="Open Menu" @click="saveClick" class="bg-espresso rounded-md text-beige">
+        <Icon name="lucide:menu" size="25" />
+      </BaseButton>
+    </ul>
+  </nav> -->
+
+  <nav class="grid grid-cols-[5fr_2fr_5fr] desktop:hidden fixed z-10 bottom-0 gap-4 w-11/12 m-[0_auto] justify-around items-center min-h-[60px] rounded-xl">
+    <ul class="--menu-left">
+      <NuxtLink class="bg-espresso rounded-md min-w-full text-beige btn-base" to="/menu">Menu</NuxtLink>
+    </ul>
+    <NuxtImg width="50" height="50" src="/maplecorner_logo.webp" class="rounded-full flex-1 shadow-[0px_0px_10px_1px_var(--color-beige)]" />
+
+    <ul class="--menu-right">
       <BaseButton class="bg-espresso rounded-md text-beige">Item</BaseButton>
       <BaseButton aria-label="Open Menu" @click="saveClick" class="bg-espresso rounded-md text-beige">
         <Icon name="lucide:menu" size="25" />
@@ -52,9 +66,12 @@ function saveClick() {
 .--nav-header {
   font-family: "Story Script", sans-serif;
 }
-.--menu-left>*, .--menu-right>* {
+.--menu-left, .--menu-right {
   box-shadow: 0px 0px 10px 1px var(--color-beige);
-  flex-basis: 50%;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  gap: 5px;
 }
 ul>button {
   display: flex;

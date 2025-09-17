@@ -1,3 +1,3 @@
 <template>
-  This page will contain info about the company
+  <div></div>
 </template>

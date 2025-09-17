@@ -37,7 +37,8 @@ function saveClick() {
     <ul class="--menu-right">
       <BaseButton class="bg-espresso rounded-md text-beige">Item</BaseButton>
       <BaseButton aria-label="Open Menu" @click="saveClick" class="bg-espresso rounded-md text-beige">
-        <Icon name="lucide:menu" size="25" />
+        <Icon v-if="store.isActive === false" name="lucide:menu" size="25" />
+        <Icon v-if="store.isActive === true" name="lucide:x" size="25" />
       </BaseButton>
     </ul>
   </nav>
